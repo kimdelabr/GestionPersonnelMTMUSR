@@ -31,21 +31,7 @@ class CreateUsersTable extends Migration
             $table->timestamps();
              //$table->tinyInteger('role')->default(0);
             /* Users: 0=>User, 1=>Staff, 2=>Manager, 3=>Admin */
-            $table->bigInteger('role_id')->unsigned();
-            $table->bigInteger('categorie_id')->unsigned();
-            $table->bigInteger('emploi_id')->unsigned();
-            $table->bigInteger('fonction_id')->unsigned();
-            $table->bigInteger('structure_id')->unsigned();
-            $table->bigInteger('region_id')->unsigned();
-            $table->bigInteger('banque_id')->unsigned();
-            $table->foreign('role_id')->references('id')->on('roles');
-            $table->foreign('categorie_id')->references('id')->on('categories');
-            $table->foreign('emploi_id')->references('id')->on('emplois');
-            $table->foreign('fonction_id')->references('id')->on('fonctions');
-            $table->foreign('structure_id')->references('id')->on('structures');
-            $table->foreign('region_id')->references('id')->on('regions');
-            $table->foreign('banque_id')->references('id')->on('banques');
-
+            
         });
     }
 
