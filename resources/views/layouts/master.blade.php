@@ -22,7 +22,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-      <span class="brand-text font-weight-bold" style="font-size: 1.3em;"><b>YBLTD</b></span>
+      <span class="brand-text font-weight-bold" style="font-size: 1.3em;"><b>MTMUSR</b></span>
     </a>
 
     <!-- Sidebar -->
@@ -74,7 +74,7 @@
       Anything you want
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2021 <a href="https://adminlte.io">Codeurspassionnes.com</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2021 <a href="https://www.transports.gov.bf/">MINISTERE DES TRANSPORTS</a>.</strong> All rights reserved.
   </footer>
 </div>
 <!-- ./wrapper -->

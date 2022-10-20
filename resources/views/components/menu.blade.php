@@ -11,12 +11,12 @@
             </a>
           </li>
 
-        
+        @can("User")
         <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                Tableau de bord
+                Gestion administrative 
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
@@ -24,24 +24,22 @@
               <li class="nav-item">
                 <a href="#" class="nav-link active">
                   <i class="nav-icon fas fa-chart-line"></i>
-                  <p>Vue globale</p>
+                  <p>Gestion des affectations</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link">
                   <i class="nav-icon fas fa-swatchbook"></i>
-                  <p>Locations</p>
+                  <p>Gestion du fichier du personnel</p>
                 </a>
               </li>
             </ul>
         </li>
-        
+        @endcan
 
 
 
-
-
-        
+        @can("Admin")
         <li class="nav-item">
             <a href="#" class="nav-link">
               <i class=" nav-icon fas fa-user-shield"></i>
@@ -68,12 +66,14 @@
               </li>
             </ul>
         </li>
+       
+
 
         <li class="nav-item">
             <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-cogs"></i>
                 <p>
-                Gestion articles
+                Management
                 <i class="right fas fa-angle-left"></i>
                 </p>
             </a>
@@ -82,34 +82,33 @@
                     <a href="#"
                         class="nav-link">
                     <i class="nav-icon far fa-circle"></i>
-                    <p>Type d'articles</p>
+                    <p>Structures</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="#"
                         class="nav-link">
                     <i class="nav-icon fas fa-list-ul"></i>
-                    <p>Articles</p>
+                    <p>Banques</p>
                     </a>
                 </li>
                 
             </ul>
         </li>
-        
+        @endcan
 
 
 
 
 
 
-
-        
-        <li class="nav-header">LOCATION</li>
+        @can("User")
+        <li class="nav-header">Gestion de la mutuelle</li>
         <li class="nav-item">
             <a href="#" class="nav-link ">
                 <i class="nav-icon fas fa-users"></i>
                 <p>
-                Gestion des clients
+                Personnel du ministère
                 </p>
             </a>
         </li>
@@ -117,20 +116,28 @@
             <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-exchange-alt"></i>
                 <p>
-                Gestion des locations
+                Gestion des évènements
                 </p>
             </a>
         </li>
+        @endcan
 
+
+
+
+
+
+        @can("Staff")
         <li class="nav-header">CAISSE</li>
         <li class="nav-item">
             <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-coins"></i>
                 <p>
-                Gestion des paiements
+                Gestion des primes
                 </p>
             </a>
         </li>
+        @endcan
         
 
         </ul>
