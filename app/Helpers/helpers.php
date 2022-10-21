@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Str;
 
 function userFullName(){
     return auth()->user()->prenom . " " . auth()->user()->nom;
@@ -25,3 +26,31 @@ function getRolesName(){
     return $rolesName;
 
 }
+
+
+function contains($container, $contenu){
+    return Str::contains($container, $contenu);
+}
+
+
+
+function setMenuClass($route, $classe){
+    $routeActuel = request()->route()->getName();
+
+    if(contains($routeActuel, $route) ){
+        return $classe;
+    }
+    return "";
+}
+
+
+
+function setMenuActive($route){
+    $routeActuel = request()->route()->getName();
+
+    if($routeActuel === $route ){
+        return "active";
+    }
+    return "";
+}
+

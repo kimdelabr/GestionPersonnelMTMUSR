@@ -3,7 +3,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
         <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{ route('home') }}" class="nav-link {{ setMenuClass('home', 'active') }}">
               <i class="nav-icon fas fa-home"></i>
               <p>
                 Accueil
@@ -40,8 +40,8 @@
 
 
         @can("Admin")
-        <li class="nav-item">
-            <a href="#" class="nav-link">
+        <li class="nav-item {{ setMenuClass('admin.habilitations.', 'menu-open') }}">
+            <a href="#" class="nav-link {{ setMenuClass('admin.habilitations.', 'active') }}">
               <i class=" nav-icon fas fa-user-shield"></i>
               <p>
                 Habilitations
@@ -51,8 +51,8 @@
             <ul class="nav nav-treeview">
               <li class="nav-item ">
                 <a
-                href="#"
-                class="nav-link"
+                href="{{ route('admin.habilitations.users.index') }}"
+                class="nav-link {{ setMenuClass('admin.habilitations.users.index', 'active') }}"
                 >
                   <i class=" nav-icon fas fa-users-cog"></i>
                   <p>Utilisateurs</p>
