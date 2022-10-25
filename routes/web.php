@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\UsersController;
+use App\Http\Livewire\Utilisateurs;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -33,7 +34,7 @@ Route::group([
         'as' => 'habilitations.'
     ], function(){
 
-        Route::get("/utilisateurs", [UsersController::class, "index"])->name("users.index");
+        Route::get("/utilisateurs", Utilisateurs::class)->name("users.index");
         //Route::get("/rolesetpermissions", [UserController::class, "index"])->name("rolespermissions.index");
         //
 
